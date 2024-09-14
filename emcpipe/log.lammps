@@ -1,0 +1,342 @@
+LAMMPS (17 Apr 2024)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (src/comm.cpp:98)
+  using 1 OpenMP thread(s) per MPI task
+variable 	T equal 300
+
+units		real
+atom_style	full
+pair_style      lj/cut/coul/long 5 5
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  multi/harmonic
+pair_modify     mix geometric tail yes
+special_bonds   lj/coul 0 0 0.5
+kspace_style 	pppm 0.0001
+
+read_data 	polymer.data
+Reading data file ...
+  orthogonal box = (0 0 0) to (61.964046 61.964046 61.964046)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  308 atoms
+  scanning bonds ...
+  4 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  22 = max dihedrals/atom
+  orthogonal box = (0 0 0) to (61.964046 61.964046 61.964046)
+  1 by 1 by 1 MPI processor grid
+  reading bonds ...
+  307 bonds
+  reading angles ...
+  612 angles
+  reading dihedrals ...
+  909 dihedrals
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0.5     
+  special bond factors coul:  0        0        0.5     
+     4 = max # of 1-2 neighbors
+     9 = max # of 1-3 neighbors
+    15 = max # of 1-4 neighbors
+    19 = max # of special neighbors
+  special bonds CPU = 0.000 seconds
+  read_data CPU = 0.006 seconds
+include 	coeffs.txt
+# Pair Coeffs
+
+pair_coeff	1 1    0.06600    3.50000  # ct,ct
+pair_coeff	2 2    0.03000    2.50000  # hc,hc
+
+# Bond Coeffs
+
+bond_coeff	1  268.00000    1.52900  # ct,ct
+bond_coeff	2  340.00000    1.09000  # ct,hc
+
+# Angle Coeffs
+
+angle_coeff	1   58.35000  112.70000  # ct,ct,ct
+angle_coeff	2   37.50000  110.70000  # ct,ct,hc
+angle_coeff	3   33.00000  107.80000  # hc,ct,hc
+
+# Dihedral Coeffs
+
+dihedral_coeff	1    3.56500    5.39300   -9.42000   -2.77600    8.47200  # ct,ct,ct,ct
+dihedral_coeff	2    0.15000   -0.45000    0.00000    0.60000    0.00000  # ct,ct,ct,hc
+dihedral_coeff	3    0.15000   -0.45000    0.00000    0.60000    0.00000  # hc,ct,ct,hc
+
+# Pair Coeffs
+
+pair_coeff	1 1    0.06600    3.50000  # ct,ct
+pair_coeff	2 2    0.03000    2.50000  # hc,hc
+
+# Bond Coeffs
+
+bond_coeff	1  268.00000    1.52900  # ct,ct
+bond_coeff	2  340.00000    1.09000  # ct,hc
+
+# Angle Coeffs
+
+angle_coeff	1   58.35000  112.70000  # ct,ct,ct
+angle_coeff	2   37.50000  110.70000  # ct,ct,hc
+angle_coeff	3   33.00000  107.80000  # hc,ct,hc
+
+# Dihedral Coeffs
+
+dihedral_coeff	1    3.56500    5.39300   -9.42000   -2.77600    8.47200  # ct,ct,ct,ct
+dihedral_coeff	2    0.15000   -0.45000    0.00000    0.60000    0.00000  # ct,ct,ct,hc
+dihedral_coeff	3    0.15000   -0.45000    0.00000    0.60000    0.00000  # hc,ct,ct,hc
+
+# Pair Coeffs
+
+pair_coeff	1 1    0.06600    3.50000  # ct,ct
+pair_coeff	2 2    0.03000    2.50000  # hc,hc
+
+# Bond Coeffs
+
+bond_coeff	1  268.00000    1.52900  # ct,ct
+bond_coeff	2  340.00000    1.09000  # ct,hc
+
+# Angle Coeffs
+
+angle_coeff	1   58.35000  112.70000  # ct,ct,ct
+angle_coeff	2   37.50000  110.70000  # ct,ct,hc
+angle_coeff	3   33.00000  107.80000  # hc,ct,hc
+
+# Dihedral Coeffs
+
+dihedral_coeff	1    3.56500    5.39300   -9.42000   -2.77600    8.47200  # ct,ct,ct,ct
+dihedral_coeff	2    0.15000   -0.45000    0.00000    0.60000    0.00000  # ct,ct,ct,hc
+dihedral_coeff	3    0.15000   -0.45000    0.00000    0.60000    0.00000  # hc,ct,ct,hc
+
+# Pair Coeffs
+
+pair_coeff	1 1    0.06600    3.50000  # ct,ct
+pair_coeff	2 2    0.03000    2.50000  # hc,hc
+
+# Bond Coeffs
+
+bond_coeff	1  268.00000    1.52900  # ct,ct
+bond_coeff	2  340.00000    1.09000  # ct,hc
+
+# Angle Coeffs
+
+angle_coeff	1   58.35000  112.70000  # ct,ct,ct
+angle_coeff	2   37.50000  110.70000  # ct,ct,hc
+angle_coeff	3   33.00000  107.80000  # hc,ct,hc
+
+# Dihedral Coeffs
+
+dihedral_coeff	1    3.56500    5.39300   -9.42000   -2.77600    8.47200  # ct,ct,ct,ct
+dihedral_coeff	2    0.15000   -0.45000    0.00000    0.60000    0.00000  # ct,ct,ct,hc
+dihedral_coeff	3    0.15000   -0.45000    0.00000    0.60000    0.00000  # hc,ct,ct,hc
+
+# Pair Coeffs
+
+pair_coeff	1 1    0.06600    3.50000  # ct,ct
+pair_coeff	2 2    0.03000    2.50000  # hc,hc
+
+# Bond Coeffs
+
+bond_coeff	1  268.00000    1.52900  # ct,ct
+bond_coeff	2  340.00000    1.09000  # ct,hc
+
+# Angle Coeffs
+
+angle_coeff	1   58.35000  112.70000  # ct,ct,ct
+angle_coeff	2   37.50000  110.70000  # ct,ct,hc
+angle_coeff	3   33.00000  107.80000  # hc,ct,hc
+
+# Dihedral Coeffs
+
+dihedral_coeff	1    3.56500    5.39300   -9.42000   -2.77600    8.47200  # ct,ct,ct,ct
+dihedral_coeff	2    0.15000   -0.45000    0.00000    0.60000    0.00000  # ct,ct,ct,hc
+dihedral_coeff	3    0.15000   -0.45000    0.00000    0.60000    0.00000  # hc,ct,ct,hc
+
+# Pair Coeffs
+
+pair_coeff	1 1    0.06600    3.50000  # ct,ct
+pair_coeff	2 2    0.03000    2.50000  # hc,hc
+
+# Bond Coeffs
+
+bond_coeff	1  268.00000    1.52900  # ct,ct
+bond_coeff	2  340.00000    1.09000  # ct,hc
+
+# Angle Coeffs
+
+angle_coeff	1   58.35000  112.70000  # ct,ct,ct
+angle_coeff	2   37.50000  110.70000  # ct,ct,hc
+angle_coeff	3   33.00000  107.80000  # hc,ct,hc
+
+# Dihedral Coeffs
+
+dihedral_coeff	1    3.56500    5.39300   -9.42000   -2.77600    8.47200  # ct,ct,ct,ct
+dihedral_coeff	2    0.15000   -0.45000    0.00000    0.60000    0.00000  # ct,ct,ct,hc
+dihedral_coeff	3    0.15000   -0.45000    0.00000    0.60000    0.00000  # hc,ct,ct,hc
+
+# Pair Coeffs
+
+pair_coeff	1 1    0.06600    3.50000  # ct,ct
+pair_coeff	2 2    0.03000    2.50000  # hc,hc
+
+# Bond Coeffs
+
+bond_coeff	1  268.00000    1.52900  # ct,ct
+bond_coeff	2  340.00000    1.09000  # ct,hc
+
+# Angle Coeffs
+
+angle_coeff	1   58.35000  112.70000  # ct,ct,ct
+angle_coeff	2   37.50000  110.70000  # ct,ct,hc
+angle_coeff	3   33.00000  107.80000  # hc,ct,hc
+
+# Dihedral Coeffs
+
+dihedral_coeff	1    3.56500    5.39300   -9.42000   -2.77600    8.47200  # ct,ct,ct,ct
+dihedral_coeff	2    0.15000   -0.45000    0.00000    0.60000    0.00000  # ct,ct,ct,hc
+dihedral_coeff	3    0.15000   -0.45000    0.00000    0.60000    0.00000  # hc,ct,ct,hc
+
+# Pair Coeffs
+
+pair_coeff	1 1    0.06600    3.50000  # ct,ct
+pair_coeff	2 2    0.03000    2.50000  # hc,hc
+
+# Bond Coeffs
+
+bond_coeff	1  268.00000    1.52900  # ct,ct
+bond_coeff	2  340.00000    1.09000  # ct,hc
+
+# Angle Coeffs
+
+angle_coeff	1   58.35000  112.70000  # ct,ct,ct
+angle_coeff	2   37.50000  110.70000  # ct,ct,hc
+angle_coeff	3   33.00000  107.80000  # hc,ct,hc
+
+# Dihedral Coeffs
+
+dihedral_coeff	1    3.56500    5.39300   -9.42000   -2.77600    8.47200  # ct,ct,ct,ct
+dihedral_coeff	2    0.15000   -0.45000    0.00000    0.60000    0.00000  # ct,ct,ct,hc
+dihedral_coeff	3    0.15000   -0.45000    0.00000    0.60000    0.00000  # hc,ct,ct,hc
+
+# Pair Coeffs
+
+pair_coeff	1 1    0.06600    3.50000  # ct,ct
+pair_coeff	2 2    0.03000    2.50000  # hc,hc
+
+# Bond Coeffs
+
+bond_coeff	1  268.00000    1.52900  # ct,ct
+bond_coeff	2  340.00000    1.09000  # ct,hc
+
+# Angle Coeffs
+
+angle_coeff	1   58.35000  112.70000  # ct,ct,ct
+angle_coeff	2   37.50000  110.70000  # ct,ct,hc
+angle_coeff	3   33.00000  107.80000  # hc,ct,hc
+
+# Dihedral Coeffs
+
+dihedral_coeff	1    3.56500    5.39300   -9.42000   -2.77600    8.47200  # ct,ct,ct,ct
+dihedral_coeff	2    0.15000   -0.45000    0.00000    0.60000    0.00000  # ct,ct,ct,hc
+dihedral_coeff	3    0.15000   -0.45000    0.00000    0.60000    0.00000  # hc,ct,ct,hc
+
+# Pair Coeffs
+
+pair_coeff	1 1    0.06600    3.50000  # ct,ct
+pair_coeff	2 2    0.03000    2.50000  # hc,hc
+
+# Bond Coeffs
+
+bond_coeff	1  268.00000    1.52900  # ct,ct
+bond_coeff	2  340.00000    1.09000  # ct,hc
+
+# Angle Coeffs
+
+angle_coeff	1   58.35000  112.70000  # ct,ct,ct
+angle_coeff	2   37.50000  110.70000  # ct,ct,hc
+angle_coeff	3   33.00000  107.80000  # hc,ct,hc
+
+# Dihedral Coeffs
+
+dihedral_coeff	1    3.56500    5.39300   -9.42000   -2.77600    8.47200  # ct,ct,ct,ct
+dihedral_coeff	2    0.15000   -0.45000    0.00000    0.60000    0.00000  # ct,ct,ct,hc
+dihedral_coeff	3    0.15000   -0.45000    0.00000    0.60000    0.00000  # hc,ct,ct,hc
+
+
+thermo		1000
+thermo_style	multi
+
+velocity 	all create $T 1234 mom yes rot yes dist gaussian
+velocity 	all create 300 1234 mom yes rot yes dist gaussian
+timestep	0.5
+fix 		fxnvt all nvt temp $T $T 100.0 tchain 1
+fix 		fxnvt all nvt temp 300 $T 100.0 tchain 1
+fix 		fxnvt all nvt temp 300 300 100.0 tchain 1
+
+dump            1 all custom 1000 polymer.dump id mol type x y z ix iy iz
+run 		100000
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (src/kspace.cpp:342)
+  G vector (1/distance) = 0.21903518
+  grid = 12 12 12
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.035348415
+  estimated relative force accuracy = 0.0001064507
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 4913 1728
+Generated 1 of 1 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7
+  ghost atom cutoff = 7
+  binsize = 3.5, bins = 18 18 18
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 16.8 | 16.8 | 16.8 Mbytes
+------------ Step              0 ----- CPU =            0 (sec) -------------
+TotEng   =       749.1842 KinEng   =       274.5326 Temp     =       300.0000 
+PotEng   =       474.6516 E_bond   =       109.3842 E_angle  =       187.8699 
+E_dihed  =       140.8157 E_impro  =         0.0000 E_vdwl   =        58.7131 
+E_coul   =        74.7013 E_long   =       -96.8326 Press    =       -17.1059
+------------ Step           1000 ----- CPU =    0.2555032 (sec) -------------
+TotEng   =       659.4243 KinEng   =       268.7295 Temp     =       293.6586 
+PotEng   =       390.6949 E_bond   =        95.2238 E_angle  =       150.7318 
+E_dihed  =       117.4099 E_impro  =         0.0000 E_vdwl   =        47.0849 
+E_coul   =        77.0670 E_long   =       -96.8225 Press    =        23.4504
+------------ Step           2000 ----- CPU =     0.511849 (sec) -------------
+TotEng   =       583.7677 KinEng   =       236.2135 Temp     =       258.1261 
+PotEng   =       347.5542 E_bond   =        84.2365 E_angle  =       135.1060 
+E_dihed  =       107.6750 E_impro  =         0.0000 E_vdwl   =        37.9041 
+E_coul   =        79.4118 E_long   =       -96.7793 Press    =       -12.7531
+------------ Step           3000 ----- CPU =    0.7682894 (sec) -------------
+TotEng   =       577.9735 KinEng   =       239.8157 Temp     =       262.0626 
+PotEng   =       338.1578 E_bond   =        73.1875 E_angle  =       148.8548 
+E_dihed  =        80.9129 E_impro  =         0.0000 E_vdwl   =        51.4093 
+E_coul   =        80.5390 E_long   =       -96.7457 Press    =        51.1105
+------------ Step           4000 ----- CPU =     1.022541 (sec) -------------
+TotEng   =       661.5062 KinEng   =       300.7510 Temp     =       328.6506 
+PotEng   =       360.7552 E_bond   =        95.3828 E_angle  =       151.3560 
+E_dihed  =        93.1329 E_impro  =         0.0000 E_vdwl   =        36.8074 
+E_coul   =        80.8422 E_long   =       -96.7661 Press    =       -77.3249
+------------ Step           5000 ----- CPU =     1.280224 (sec) -------------
+TotEng   =       700.9504 KinEng   =       296.9847 Temp     =       324.5349 
+PotEng   =       403.9657 E_bond   =       113.4897 E_angle  =       174.6115 
+E_dihed  =        74.6719 E_impro  =         0.0000 E_vdwl   =        56.8606 
+E_coul   =        81.1141 E_long   =       -96.7821 Press    =       -30.8098
+------------ Step           6000 ----- CPU =     1.532756 (sec) -------------
+TotEng   =       695.7420 KinEng   =       284.5728 Temp     =       310.9716 
+PotEng   =       411.1692 E_bond   =       109.8041 E_angle  =       176.2690 
+E_dihed  =        90.4560 E_impro  =         0.0000 E_vdwl   =        50.2118 
+E_coul   =        81.2293 E_long   =       -96.8009 Press    =       -67.8104
+------------ Step           7000 ----- CPU =     1.790978 (sec) -------------
+TotEng   =       625.1611 KinEng   =       270.7185 Temp     =       295.8320 
+PotEng   =       354.4427 E_bond   =        81.9425 E_angle  =       155.1058 
+E_dihed  =        84.3975 E_impro  =         0.0000 E_vdwl   =        49.7328 
+E_coul   =        80.0577 E_long   =       -96.7937 Press    =        23.6841
+------------ Step           80

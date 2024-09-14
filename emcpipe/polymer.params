@@ -1,0 +1,110 @@
+# LAMMPS parameters created by EMC v9.4.4, build Aug 17 2024 13:53:18
+
+# Variables
+
+variable	seed		index	-1
+variable	ntotal		index	308
+variable	fshape		index	1
+variable	output		index	polymer
+variable	field		index	opls/2012/opls-aa
+variable	location1	index	~/pkgs/emc-v9.4.4/field/
+variable	nav		index	0.6022141179
+variable	temperature	index	300
+variable	radius		index	5
+variable	nrelax		index	100
+variable	weight_nonbond	index	0.0001
+variable	weight_bond	index	0.0001
+variable	weight_focus	index	1
+variable	cutoff		index	9.5
+variable	charge_cutoff	index	9.5
+variable	kappa		index	4
+variable	density1	index	0.01
+variable	lprevious	index	0
+variable	lphase		index	61.9640459825
+variable	f_poly		index	1
+variable	chem_ethyl	index	*CC*
+variable	chem_propyl	index	*CC(C)*
+variable	chem_methyl	index	*C
+variable	lg_ethyl	index	6
+variable	lg_propyl	index	9
+variable	lg_methyl	index	4
+variable	norm_poly	index	100
+variable	l_poly		index	308
+variable	mg_ethyl	index	28.0536
+variable	mg_propyl	index	42.0804
+variable	mg_methyl	index	15.0347
+variable	m_poly		index	1432.7494
+variable	n_poly		index	1
+variable	mtotal		index	1432.7494
+variable	nphase1		index	308
+variable	mphase1		index	1432.7494
+variable	vphase1		index	237913.618664
+variable	lbox		index	61.9640459825
+variable	lphase1		index	61.9640459825
+variable	lxx		index	61.9640459825
+variable	lyy		index	61.9640459825
+variable	lzz		index	61.9640459825
+variable	lzy		index	0
+variable	lzx		index	0
+variable	lyx		index	0
+variable	vtotal		index	237913.618664
+variable	nl_poly		index	1
+
+# Types
+
+variable	type_ct		index	1
+variable	type_hc		index	2
+
+variable	type_bond_ct_ct	index	1
+variable	type_bond_ct_hc	index	2
+
+variable	type_angle_ct_ct_ct index	1
+variable	type_angle_ct_ct_hc index	2
+variable	type_angle_hc_ct_hc index	3
+
+# Clusters
+
+variable	n0_poly		index	1
+variable	n1_poly		index	1
+variable	nl_poly		index	1
+
+# Flags
+
+variable	flag_charged	index	1
+
+# Masses
+
+mass		1    12.01100  # ct
+mass		2     1.00790  # hc
+
+# Potentials
+
+pair_style	lj/cut/coul/long ${cutoff} ${charge_cutoff}  # 9.5
+bond_style	harmonic
+angle_style	harmonic
+dihedral_style	multi/harmonic
+pair_modify	mix geometric tail yes
+special_bonds	lj/coul 0 0 0.5
+
+# Pair Coeffs
+
+pair_coeff	1 1    0.06600    3.50000  # ct,ct
+pair_coeff	2 2    0.03000    2.50000  # hc,hc
+
+# Bond Coeffs
+
+bond_coeff	1  268.00000    1.52900  # ct,ct
+bond_coeff	2  340.00000    1.09000  # ct,hc
+
+# Angle Coeffs
+
+angle_coeff	1   58.35000  112.70000  # ct,ct,ct
+angle_coeff	2   37.50000  110.70000  # ct,ct,hc
+angle_coeff	3   33.00000  107.80000  # hc,ct,hc
+
+# Dihedral Coeffs
+
+dihedral_coeff	1    3.56500    5.39300   -9.42000   -2.77600    8.47200  # ct,ct,ct,ct
+dihedral_coeff	2    0.15000   -0.45000    0.00000    0.60000    0.00000  # ct,ct,ct,hc
+dihedral_coeff	3    0.15000   -0.45000    0.00000    0.60000    0.00000  # hc,ct,ct,hc
+
