@@ -1,7 +1,7 @@
 (* EMC: Script *)
 
 (* Created by emc_setup.pl v4.1.5, March 30, 2024
-   on Sat Sep 14 10:01:43 PDT 2024 *)
+   on Tue Sep 17 11:49:30 PDT 2024 *)
 
 (* define variables *)
 
@@ -30,9 +30,9 @@ variables	= {
 
   f_poly	-> 1,
 
-  chem_ethyl	-> "*CC*",
+  chem_ethano	-> "*CC(=O)*",
   chem_propyl	-> "*CC(C)*",
-  chem_methyl	-> "*C"
+  chem_propylt	-> "*CC(C)"
 };
 
 output		= {
@@ -55,32 +55,32 @@ field		= {
 
 groups		= {
   group		-> {
-    id		-> ethyl, depth -> 8, chemistry -> chem_ethyl,
+    id		-> ethano, depth -> 8, chemistry -> chem_ethano,
     connects	-> {
-      {source	-> $end1, destination -> {ethyl, $end2}},
-      {source	-> $end1, destination -> {methyl, $end1}},
+      {source	-> $end1, destination -> {ethano, $end2}},
       {source	-> $end1, destination -> {propyl, $end2}},
-      {source	-> $end2, destination -> {ethyl, $end1}},
-      {source	-> $end2, destination -> {methyl, $end1}},
-      {source	-> $end2, destination -> {propyl, $end1}}
+      {source	-> $end1, destination -> {propylt, $end1}},
+      {source	-> $end2, destination -> {ethano, $end1}},
+      {source	-> $end2, destination -> {propyl, $end1}},
+      {source	-> $end2, destination -> {propylt, $end1}}
     }
   },
   group		-> {
     id		-> propyl, depth -> 8, chemistry -> chem_propyl,
     connects	-> {
-      {source	-> $end1, destination -> {ethyl, $end2}},
-      {source	-> $end1, destination -> {methyl, $end1}},
+      {source	-> $end1, destination -> {ethano, $end2}},
       {source	-> $end1, destination -> {propyl, $end2}},
-      {source	-> $end2, destination -> {ethyl, $end1}},
-      {source	-> $end2, destination -> {methyl, $end1}},
-      {source	-> $end2, destination -> {propyl, $end1}}
+      {source	-> $end1, destination -> {propylt, $end1}},
+      {source	-> $end2, destination -> {ethano, $end1}},
+      {source	-> $end2, destination -> {propyl, $end1}},
+      {source	-> $end2, destination -> {propylt, $end1}}
     }
   },
   group		-> {
-    id		-> methyl, depth -> 8, chemistry -> chem_methyl,
+    id		-> propylt, depth -> 8, chemistry -> chem_propylt,
     connects	-> {
-      {source	-> $end1, destination -> {ethyl, $end1}},
-      {source	-> $end1, destination -> {ethyl, $end2}},
+      {source	-> $end1, destination -> {ethano, $end2}},
+      {source	-> $end1, destination -> {ethano, $end1}},
       {source	-> $end1, destination -> {propyl, $end2}},
       {source	-> $end1, destination -> {propyl, $end1}}
     }
@@ -102,22 +102,22 @@ variables	= {
 
   (* lengths *)
 
-  lg_ethyl	-> nsites(ethyl),
+  lg_ethano	-> nsites(ethano),
   lg_propyl	-> nsites(propyl),
-  lg_methyl	-> nsites(methyl),
+  lg_propylt	-> nsites(propylt),
   norm_poly	-> 100,
 
-  l_poly	-> (20*lg_ethyl+20*lg_propyl+2*lg_methyl)*100/norm_poly,
+  l_poly	-> (20*lg_ethano+20*lg_propyl+2*lg_propylt)*100/norm_poly,
 
   (* masses *)
 
-  mg_ethyl	-> mass(ethyl),
+  mg_ethano	-> mass(ethano),
   mg_propyl	-> mass(propyl),
-  mg_methyl	-> mass(methyl),
+  mg_propylt	-> mass(propylt),
 
   norm_poly	-> 100,
 
-  m_poly	-> (20*mg_ethyl+20*mg_propyl+2*mg_methyl)*100/norm_poly,
+  m_poly	-> (20*mg_ethano+20*mg_propyl+2*mg_propylt)*100/norm_poly,
 
 
   (* sizing *)
@@ -152,7 +152,7 @@ clusters	= {
   polymer	-> {
     id		-> poly, system -> main, type -> alternate,
     n		-> int(100*n_poly/norm_poly+0.5),
-    groups	-> {ethyl, propyl, methyl},
+    groups	-> {ethano, propyl, propylt},
     weights	-> {1, 1, 1},
     nrepeat	-> {20, 20, 2}
   }

@@ -1,0 +1,290 @@
+# LAMMPS parameters created by EMC v9.4.4, build Aug 17 2024 13:53:18
+
+# Variables
+
+variable	seed		index	-1
+variable	ntotal		index	300
+variable	fshape		index	1
+variable	output		index	tran_polymer
+variable	field		index	opls/2012/opls-aa
+variable	location1	index	~/pkgs/emc-v9.4.4/field/
+variable	nav		index	0.6022141179
+variable	temperature	index	300
+variable	radius		index	5
+variable	nrelax		index	100
+variable	weight_nonbond	index	0.0001
+variable	weight_bond	index	0.0001
+variable	weight_focus	index	1
+variable	cutoff		index	9.5
+variable	charge_cutoff	index	9.5
+variable	kappa		index	4
+variable	import		index	tran_polymer.pdb
+variable	nx		index	1
+variable	lxx		index	66.4692
+variable	lyy		index	66.4692
+variable	lzz		index	66.4692
+variable	lzy		index	0
+variable	lzx		index	0
+variable	lyx		index	0
+variable	la		index	66.4692
+variable	lb		index	66.4692
+variable	lc		index	66.4692
+variable	lbox		index	66.4692
+variable	mtotal		index	1768.5286
+variable	ny		index	1
+variable	nz		index	1
+variable	charge		index	0
+variable	vtotal		index	28104.3336797
+variable	nl_poly		index	42
+
+# Types
+
+variable	type_c		index	1
+variable	type_ct		index	2
+variable	type_hc		index	3
+variable	type_o		index	4
+
+variable	type_bond_c_ct	index	1
+variable	type_bond_c_o	index	2
+variable	type_bond_ct_ct	index	3
+variable	type_bond_ct_hc	index	4
+
+variable	type_angle_c_ct_ct index	1
+variable	type_angle_c_ct_hc index	2
+variable	type_angle_ct_c_ct index	3
+variable	type_angle_ct_c_o index	4
+variable	type_angle_ct_ct_ct index	5
+variable	type_angle_ct_ct_hc index	6
+variable	type_angle_hc_ct_hc index	7
+
+# Clusters
+
+variable	n0_poly		index	1
+variable	n1_poly		index	42
+variable	nl_poly		index	42
+
+variable	n0_poly:1	index	43
+variable	n1_poly:1	index	42
+variable	nl_poly:1	index	0
+
+variable	n0_poly:2	index	43
+variable	n1_poly:2	index	42
+variable	nl_poly:2	index	0
+
+variable	n0_poly:3	index	43
+variable	n1_poly:3	index	42
+variable	nl_poly:3	index	0
+
+variable	n0_poly:4	index	43
+variable	n1_poly:4	index	42
+variable	nl_poly:4	index	0
+
+variable	n0_poly:5	index	43
+variable	n1_poly:5	index	42
+variable	nl_poly:5	index	0
+
+variable	n0_poly:6	index	43
+variable	n1_poly:6	index	42
+variable	nl_poly:6	index	0
+
+variable	n0_poly:7	index	43
+variable	n1_poly:7	index	42
+variable	nl_poly:7	index	0
+
+variable	n0_poly:8	index	43
+variable	n1_poly:8	index	42
+variable	nl_poly:8	index	0
+
+variable	n0_poly:9	index	43
+variable	n1_poly:9	index	42
+variable	nl_poly:9	index	0
+
+variable	n0_poly:10	index	43
+variable	n1_poly:10	index	42
+variable	nl_poly:10	index	0
+
+variable	n0_poly:11	index	43
+variable	n1_poly:11	index	42
+variable	nl_poly:11	index	0
+
+variable	n0_poly:12	index	43
+variable	n1_poly:12	index	42
+variable	nl_poly:12	index	0
+
+variable	n0_poly:13	index	43
+variable	n1_poly:13	index	42
+variable	nl_poly:13	index	0
+
+variable	n0_poly:14	index	43
+variable	n1_poly:14	index	42
+variable	nl_poly:14	index	0
+
+variable	n0_poly:15	index	43
+variable	n1_poly:15	index	42
+variable	nl_poly:15	index	0
+
+variable	n0_poly:16	index	43
+variable	n1_poly:16	index	42
+variable	nl_poly:16	index	0
+
+variable	n0_poly:17	index	43
+variable	n1_poly:17	index	42
+variable	nl_poly:17	index	0
+
+variable	n0_poly:18	index	43
+variable	n1_poly:18	index	42
+variable	nl_poly:18	index	0
+
+variable	n0_poly:19	index	43
+variable	n1_poly:19	index	42
+variable	nl_poly:19	index	0
+
+variable	n0_poly:20	index	43
+variable	n1_poly:20	index	42
+variable	nl_poly:20	index	0
+
+variable	n0_poly:21	index	43
+variable	n1_poly:21	index	42
+variable	nl_poly:21	index	0
+
+variable	n0_poly:22	index	43
+variable	n1_poly:22	index	42
+variable	nl_poly:22	index	0
+
+variable	n0_poly:23	index	43
+variable	n1_poly:23	index	42
+variable	nl_poly:23	index	0
+
+variable	n0_poly:24	index	43
+variable	n1_poly:24	index	42
+variable	nl_poly:24	index	0
+
+variable	n0_poly:25	index	43
+variable	n1_poly:25	index	42
+variable	nl_poly:25	index	0
+
+variable	n0_poly:26	index	43
+variable	n1_poly:26	index	42
+variable	nl_poly:26	index	0
+
+variable	n0_poly:27	index	43
+variable	n1_poly:27	index	42
+variable	nl_poly:27	index	0
+
+variable	n0_poly:28	index	43
+variable	n1_poly:28	index	42
+variable	nl_poly:28	index	0
+
+variable	n0_poly:29	index	43
+variable	n1_poly:29	index	42
+variable	nl_poly:29	index	0
+
+variable	n0_poly:30	index	43
+variable	n1_poly:30	index	42
+variable	nl_poly:30	index	0
+
+variable	n0_poly:31	index	43
+variable	n1_poly:31	index	42
+variable	nl_poly:31	index	0
+
+variable	n0_poly:32	index	43
+variable	n1_poly:32	index	42
+variable	nl_poly:32	index	0
+
+variable	n0_poly:33	index	43
+variable	n1_poly:33	index	42
+variable	nl_poly:33	index	0
+
+variable	n0_poly:34	index	43
+variable	n1_poly:34	index	42
+variable	nl_poly:34	index	0
+
+variable	n0_poly:35	index	43
+variable	n1_poly:35	index	42
+variable	nl_poly:35	index	0
+
+variable	n0_poly:36	index	43
+variable	n1_poly:36	index	42
+variable	nl_poly:36	index	0
+
+variable	n0_poly:37	index	43
+variable	n1_poly:37	index	42
+variable	nl_poly:37	index	0
+
+variable	n0_poly:38	index	43
+variable	n1_poly:38	index	42
+variable	nl_poly:38	index	0
+
+variable	n0_poly:39	index	43
+variable	n1_poly:39	index	42
+variable	nl_poly:39	index	0
+
+variable	n0_poly:40	index	43
+variable	n1_poly:40	index	42
+variable	nl_poly:40	index	0
+
+variable	n0_poly:41	index	43
+variable	n1_poly:41	index	42
+variable	nl_poly:41	index	0
+
+# Flags
+
+variable	flag_charged	index	1
+
+# Masses
+
+mass		1    12.01100  # c
+mass		2    12.01100  # ct
+mass		3     1.00790  # hc
+mass		4    15.99940  # o
+
+# Potentials
+
+pair_style	lj/cut/coul/long ${cutoff} ${charge_cutoff}  # 9.5
+bond_style	harmonic
+angle_style	harmonic
+dihedral_style	multi/harmonic
+improper_style	harmonic
+pair_modify	mix geometric tail yes
+special_bonds	lj/coul 0 0 0.5
+
+# Pair Coeffs
+
+pair_coeff	 1  1    0.10500    3.75000  # c,c
+pair_coeff	 2  2    0.06600    3.50000  # ct,ct
+pair_coeff	 3  3    0.03000    2.50000  # hc,hc
+pair_coeff	 4  4    0.21000    2.96000  # o,o
+
+# Bond Coeffs
+
+bond_coeff	1  317.00000    1.52200  # c,ct
+bond_coeff	2  570.00000    1.22900  # c,o
+bond_coeff	3  268.00000    1.52900  # ct,ct
+bond_coeff	4  340.00000    1.09000  # ct,hc
+
+# Angle Coeffs
+
+angle_coeff	1   63.00000  111.10000  # c,ct,ct
+angle_coeff	2   35.00000  109.50000  # c,ct,hc
+angle_coeff	3   70.00000  116.00000  # ct,c,ct
+angle_coeff	4   80.00000  120.40000  # ct,c,o
+angle_coeff	5   58.35000  112.70000  # ct,ct,ct
+angle_coeff	6   37.50000  110.70000  # ct,ct,hc
+angle_coeff	7   33.00000  107.80000  # hc,ct,hc
+
+# Dihedral Coeffs
+
+dihedral_coeff	1   -1.01200   -1.72600    0.45600    1.17000    0.00000  # c,ct,ct,ct
+dihedral_coeff	2   -0.03800    0.11400    0.00000   -0.15200    0.00000  # c,ct,ct,hc
+dihedral_coeff	3    0.19550    1.88950    0.14400   -1.55000    0.00000  # ct,c,ct,ct
+dihedral_coeff	4    0.13750   -0.41250    0.00000    0.55000    0.00000  # ct,c,ct,hc
+dihedral_coeff	5    0.00000    0.00000    0.00000    0.00000    0.00000  # ct,ct,c,o
+dihedral_coeff	6    3.56500    5.39300   -9.42000   -2.77600    8.47200  # ct,ct,ct,ct
+dihedral_coeff	7    0.15000   -0.45000    0.00000    0.60000    0.00000  # ct,ct,ct,hc
+dihedral_coeff	8    0.00000    0.00000    0.00000    0.00000    0.00000  # hc,ct,c,o
+dihedral_coeff	9    0.15000   -0.45000    0.00000    0.60000    0.00000  # hc,ct,ct,hc
+
+# Improper Coeffs
+
+improper_coeff	1   21.00000    0.00000  # c,ct,ct,o
+

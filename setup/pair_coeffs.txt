@@ -1,0 +1,4 @@
+pair_coeff	 1  1    0.10500    3.75000  # c,c
+pair_coeff	 2  2    0.06600    3.50000  # ct,ct
+pair_coeff	 3  3    0.03000    2.50000  # hc,hc
+pair_coeff	 4  4    0.21000    2.96000  # o,o

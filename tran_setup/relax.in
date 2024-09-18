@@ -9,8 +9,9 @@ dihedral_style  multi/harmonic
 pair_modify     mix geometric tail yes
 special_bonds   lj/coul 0 0 0.5
 kspace_style 	pppm 0.0001
+improper_style	harmonic
 
-read_data 	polymer.data
+read_data 	tran_polymer.data
 include 	coeffs.txt
 
 thermo		1000
@@ -18,8 +19,8 @@ thermo_style	multi
 
 velocity 	all create $T 1234 mom yes rot yes dist gaussian
 timestep	0.5
-fix 		fxnvt all nvt temp $T $T 100.0 tchain 1
+fix 		fxnpt all npt temp $T $T 100.0 x 0 0 1000.0
 
-dump            1 all custom 1000 polymer.dump id mol type x y z ix iy iz
-run 		100000
-write_data	polymer_relaxed.data
+dump            1 all custom 1000 tran_polymer.dump id mol type x y z ix iy iz
+run 		10000
+write_data	tran_polymer_relaxed.data

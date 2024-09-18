@@ -1,15 +1,15 @@
 #!/usr/bin/env -S vmd -e
 #
-#  script:	polymer.vmd
+#  script:	tran_polymer.vmd
 #  author:	EMC v9.4.4, build Aug 17 2024 13:53:18
-#  date:	Sat Sep 14 10:01:45 2024
+#  date:	Tue Sep 17 21:50:35 2024
 #  purpose:	EMC generated script for structure loading by VMD; this script
 #		is auto-generated
 #
 
 # variables
 
-set project "polymer"
+set project "tran_polymer"
 
 # load structure
 
@@ -42,8 +42,8 @@ mol showrep top 0 1
 
 # set atom radii
 
-set radii {1.75 1.25}
-set types {"ct" "hc"}
+set radii {1.875 1.75 1.25 1.48}
+set types {"c" "ct" "hc" "o"}
 foreach type ${types} radius ${radii} {
   set atoms [atomselect top "type \"${type}\""]
   $atoms set radius ${radius}

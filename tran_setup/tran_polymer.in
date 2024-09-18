@@ -1,6 +1,6 @@
 # LAMMPS input script for standardized atomistic simulations
 # Created by emc_setup.pl v4.1.5, March 30, 2024 as part of EMC
-# on Sat Sep 14 10:01:43 PDT 2024
+# on Tue Sep 17 21:50:35 PDT 2024
 
 # LAMMPS atomistic input script
 
@@ -10,7 +10,7 @@ atom_style	full
 
 # Variable definitions
 
-variable	project		index	"polymer"	# project name
+variable	project		index	"tran_polymer"	# project name
 variable	source		index	.	# data directory
 variable	params		index	.	# parameter directory
 variable	temperature	index	300		# system temperature

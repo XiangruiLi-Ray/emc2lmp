@@ -1,0 +1,7 @@
+angle_coeff	1   63.00000  111.10000  # c,ct,ct
+angle_coeff	2   35.00000  109.50000  # c,ct,hc
+angle_coeff	3   70.00000  116.00000  # ct,c,ct
+angle_coeff	4   80.00000  120.40000  # ct,c,o
+angle_coeff	5   58.35000  112.70000  # ct,ct,ct
+angle_coeff	6   37.50000  110.70000  # ct,ct,hc
+angle_coeff	7   33.00000  107.80000  # hc,ct,hc

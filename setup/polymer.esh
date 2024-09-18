@@ -52,12 +52,9 @@ ITEM	END
 
 ITEM	GROUPS
 
-#ethyl		*CC*,1,ethyl:2
-#methyl		*C,1,ethyl:1,1,ethyl:2
-
-ethyl           *CC*,1,ethyl:2,1,propyl:2
-propyl          *CC(C)*,1,propyl:2,1,ethyl:2
-methyl          *C,1,ethyl:1,1,ethyl:2,1,propyl:1,1,propyl:2
+ethano		*CC(=O)*,1,ethano:2,1,propyl:2
+propyl          *CC(C)*,1,propyl:2,1,ethano:2
+propylt	 	*CC(C),1,ethano:1,1,ethano:2,1,propyl:1,1,propyl:2
 
 ITEM	END
 
@@ -74,7 +71,7 @@ ITEM	END
 ITEM	POLYMERS
 
 poly
-100		ethyl,20,propyl,20,methyl,2
+100		ethano,20,propyl,20,propylt,2
 
 ITEM	END
 

@@ -1,0 +1,150 @@
+(* EMC: Script *)
+
+(* Created by emc_setup.pl v4.1.5, March 30, 2024
+   on Tue Sep 17 21:50:35 PDT 2024 *)
+
+(* define variables *)
+
+variables	= {
+  seed		-> -1,
+  ntotal	-> 10000,
+  fshape	-> 1,
+  output	-> "tran_polymer",
+  field		-> "opls/2012/opls-aa",
+  location1	-> "~/pkgs/emc-v9.4.4/field/",
+
+  nav		-> 0.6022141179,
+  temperature	-> 300,
+  radius	-> 5,
+  nrelax	-> 100,
+  weight_nonbond -> 0.0001,
+  weight_bond	-> 0.0001,
+  weight_focus	-> 1,
+  cutoff	-> 9.5,
+  charge_cutoff	-> 9.5,
+  kappa		-> 4,
+
+  import	-> "tran_polymer.pdb",
+  nx		-> 1
+};
+
+output		= {
+  debug		-> false,
+  exit		-> true,
+  info		-> true,
+  warning	-> true
+};
+
+(* define force field *)
+
+field		= {
+  id		-> opls-aa,
+  mode		-> opls,
+  name		-> {location1+field+".prm", location1+field+".top"},
+  compress	-> false
+};
+
+(* import file *)
+
+pdb		= {name -> import, mode -> get, detect -> true, depth -> 8,
+		   crystal -> false, flag -> {charge -> true}, map -> false};
+
+variables	= {
+  lxx		-> geometry(id -> xx),
+  lyy		-> geometry(id -> yy),
+  lzz		-> geometry(id -> zz),
+  lzy		-> geometry(id -> zy),
+  lzx		-> geometry(id -> zx),
+  lyx		-> geometry(id -> yx),
+
+  la		-> lxx,
+  lb		-> sqrt(lyx*lyx+lyy*lyy),
+  lc		-> sqrt(lzx*lzx+lzy*lzy+lzz*lzz),
+
+  lbox		-> vtotal()^(1/3)
+};
+
+field		= {
+  mode		-> apply,
+  check		-> {
+    atomistic	-> true,
+    charge	-> true
+  },
+  debug		-> false
+};
+
+(* determine simulation sizing *)
+
+variables	= {
+
+  (* system sizing *)
+
+  ntotal	-> 0,
+  mtotal	-> 0
+};
+
+(* import sizing *)
+
+variables	= {
+  ny		-> nx,
+  nz		-> nx
+};
+
+crystal		= {n -> {nx, ny, nz}, periodic -> {false, false, false},
+		   unwrap -> true};
+
+flag		= {oper -> set, flag -> {rigid, focus}};
+
+simulation	= {
+  systems	-> {
+    properties	-> {id -> 0, t -> temperature}
+  }
+};
+
+variables	= {
+  lxx		-> geometry(id -> xx),
+  lyy		-> geometry(id -> yy),
+  lzz		-> geometry(id -> zz),
+  lzy		-> geometry(id -> zy),
+  lzx		-> geometry(id -> zx),
+  lyx		-> geometry(id -> yx),
+
+  la		-> lxx,
+  lb		-> sqrt(lyx*lyx+lyy*lyy),
+  lc		-> sqrt(lzx*lzx+lzy*lzy+lzz*lzz),
+
+  charge	-> charge(),
+  mtotal	-> mtotal(),
+  ntotal	-> ntotal(),
+  vtotal	-> vsites(ntrials -> 10000),
+  nl_poly	-> nclusters()
+};
+
+(* define interactions *)
+
+simulation	= {
+  units		-> {
+    permittivity -> 1,
+    seed	-> seed
+  },
+  types		-> {
+    coulomb	-> {
+      pair	-> {active -> true, cutoff -> charge_cutoff}
+    }
+  }
+};
+
+(* storage *)
+
+put		= {name -> output, compress -> true};
+
+pdb		= {name -> output, compress -> true, extend -> false,
+		   forcefield -> opls, detect -> false, hexadecimal -> false,
+		   unwrap -> true, pbc -> true, atom -> index, residue -> index,
+		   segment -> index, rank -> false, vdw -> false, cut -> false,
+		   fixed -> true, rigid -> true, connectivity -> false,
+		   parameters -> false};
+
+lammps		= {name -> output, mode -> put, forcefield -> opls,
+		   parameters -> true, types -> false, unwrap -> true,
+		   charges -> true, ewald -> true};

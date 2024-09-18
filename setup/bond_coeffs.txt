@@ -1,0 +1,4 @@
+bond_coeff	1  317.00000    1.52200  # c,ct
+bond_coeff	2  570.00000    1.22900  # c,o
+bond_coeff	3  268.00000    1.52900  # ct,ct
+bond_coeff	4  340.00000    1.09000  # ct,hc
